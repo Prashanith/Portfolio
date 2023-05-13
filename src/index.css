@@ -1,12 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap");
+@import "https://unpkg.com/open-props";
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+a {
+  color: white;
+}
+
+@layer components {
+  .outlinedBtn {
+    @apply text-white border border-gray-800 text-sm
+    hover:border-transparent hover:bg-tertiary hover:text-white 
+    font-bold uppercase px-6 py-3 rounded-md outline-none focus:outline-none 
+    ease-linear transition-all duration-150;
+  }
+
+  .fabButton {
+    @apply rounded-full border-collapse;
+  }
+}
+
+@layer utilities {
+  .boldText {
+    @apply text-white font-light text-5xl uppercase;
+  }
+
+  .iText {
+    @apply text-white font-light text-3xl;
+  }
+
+  .navItem {
+    @apply text-white font-light text-lg hover:underline uppercase;
+  }
+}
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
+  color: whitesmoke;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -14,56 +49,41 @@
   -webkit-text-size-adjust: 100%;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: none;
+  border-radius: 10px;
+  background-color: #121420;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: transparent;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #d21312;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#footer {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1012%26quot%3b)' fill='none'%3e%3crect width='1440' height='250' x='0' y='0' fill='rgba(5%2c 18%2c 37%2c 1)'%3e%3c/rect%3e%3cpath d='M4 250L254 0L483.5 0L233.5 250z' fill='url(%23SvgjsLinearGradient1013)'%3e%3c/path%3e%3cpath d='M242.60000000000002 250L492.6 0L821.1 0L571.1 250z' fill='url(%23SvgjsLinearGradient1013)'%3e%3c/path%3e%3cpath d='M485.20000000000005 250L735.2 0L1090.7 0L840.7 250z' fill='url(%23SvgjsLinearGradient1013)'%3e%3c/path%3e%3cpath d='M713.8000000000001 250L963.8000000000001 0L1157.3000000000002 0L907.3000000000001 250z' fill='url(%23SvgjsLinearGradient1013)'%3e%3c/path%3e%3cpath d='M1413 250L1163 0L981.5 0L1231.5 250z' fill='url(%23SvgjsLinearGradient1014)'%3e%3c/path%3e%3cpath d='M1157.4 250L907.4000000000001 0L773.9000000000001 0L1023.9000000000001 250z' fill='url(%23SvgjsLinearGradient1014)'%3e%3c/path%3e%3cpath d='M951.8 250L701.8 0L589.3 0L839.3 250z' fill='url(%23SvgjsLinearGradient1014)'%3e%3c/path%3e%3cpath d='M712.1999999999999 250L462.19999999999993 0L309.19999999999993 0L559.1999999999999 250z' fill='url(%23SvgjsLinearGradient1014)'%3e%3c/path%3e%3cpath d='M1255.526255722166 250L1440 65.52625572216601L1440 250z' fill='url(%23SvgjsLinearGradient1013)'%3e%3c/path%3e%3cpath d='M0 250L184.473744277834 250L 0 65.52625572216601z' fill='url(%23SvgjsLinearGradient1014)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1012'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1013'%3e%3cstop stop-color='rgba(27%2c 36%2c 50%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(27%2c 36%2c 50%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1014'%3e%3cstop stop-color='rgba(27%2c 36%2c 50%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(27%2c 36%2c 50%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.italic {
+  font-style: italic;
+  font-weight: 300;
+}
+
+input,
+textarea,
+textarea:focus,
+textarea:active,
+textarea:hover,
+input:focus,
+input:active,
+input:hover {
+  @apply text-white bg-primary h-12 px-3 outline-none outline-offset-0 border-gray-600;
 }
