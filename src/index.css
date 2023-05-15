@@ -33,7 +33,7 @@ a {
   }
 
   .navItem {
-    @apply text-white font-light text-lg hover:underline uppercase;
+    @apply text-white font-light text-lg uppercase;
   }
 
   .pagePadding{

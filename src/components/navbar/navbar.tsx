@@ -1,5 +1,7 @@
 import { useState } from "react";
 import Logo from "../logo/logo";
+import { motion } from "framer-motion";
+import { Animation } from "../../config/animationConfig";
 
 interface NavItem {
   name: string;
@@ -27,11 +29,24 @@ function NavBar() {
         <ul className="sm:flex sm:space-x-5 hidden">
           {navItems.map((e) => {
             return (
-              <li>
-                <a href={`#${e.id}`} className="navItem">
+              <motion.li
+                whileHover={{
+                  scale: "1.2",
+                }}
+                initial={{ x: "100vw" }}
+                animate={{ x: 0 }}
+                transition={{ delay: Animation.delay }}
+              >
+                <motion.a
+                  transition={{
+                    delay: 0.6,
+                  }}
+                  href={`#${e.id}`}
+                  className="navItem"
+                >
                   {e.name}
-                </a>
-              </li>
+                </motion.a>
+              </motion.li>
             );
           })}
         </ul>
@@ -62,7 +77,7 @@ function NavBar() {
 function SideNavigation({ showNav, setShownav }: INavItem) {
   return (
     <div
-      className={`h-screen bg-secondary fixed top-0 left-0 z-10 w-48 ${
+      className={`h-screen bg-secondary fixed top-0 left-0 z-10 w-48 transition-all ease-out duration-[1500] ${
         showNav ? "sm:invisible visible" : "invisible"
       }`}
     >
@@ -73,7 +88,11 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
         {navItems.map((e) => {
           return (
             <li>
-              <a
+              <motion.a
+                whileTap={{
+                  scale: 1.3,
+                }}
+                transition={{ type: "spring", stiffness: 300 }}
                 href={`#${e.id}`}
                 className="navItem"
                 onClick={() => {
@@ -83,7 +102,7 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
                 }}
               >
                 {e.name}
-              </a>
+              </motion.a>
             </li>
           );
         })}

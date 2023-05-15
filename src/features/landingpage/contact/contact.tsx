@@ -3,6 +3,8 @@ import { useState } from "react";
 import Dialog from "../../../components/dialog/dialog";
 import { db } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
+import { motion } from "framer-motion";
+import { Animation } from "../../../config/animationConfig";
 
 function Contact() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -45,7 +47,10 @@ function Contact() {
     onSubmit: (values) => submitDetails(values),
   });
   return (
-    <div
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 3, type:"spring" }}
       id="contact"
       className="pagePadding py-16 sm:py-28 flex justify-center items-center bg-bgContact bg-opacity-50 bg-center bg-no-repeat"
     >
@@ -70,7 +75,10 @@ function Contact() {
           <p className="absolute self-center ">Contact Me</p>
         </div>
         <div className="flex flex-col items-stretch space-y-5 px-6 py-2 sm:px-12 sm:py-8">
-          <input
+          <motion.input
+            initial={{ x: -120 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: Animation.delay }}
             id="name"
             name="name"
             placeholder="Name"
@@ -78,7 +86,10 @@ function Contact() {
             onChange={formik.handleChange}
             value={formik.values.name}
           />
-          <input
+          <motion.input
+            initial={{ x: 120 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: Animation.delay }}
             id="email"
             name="email"
             type="email"
@@ -87,7 +98,10 @@ function Contact() {
             value={formik.values.email}
           />
 
-          <input
+          <motion.input
+            initial={{ x: -120 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: Animation.delay }}
             id="mobile"
             name="mobile"
             type="mobile"
@@ -96,7 +110,10 @@ function Contact() {
             value={formik.values.mobile}
           />
 
-          <textarea
+          <motion.textarea
+            initial={{ x: 120 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: Animation.delay }}
             id="message"
             name="message"
             value={formik.values.message}
@@ -104,16 +121,19 @@ function Contact() {
             placeholder="Message"
           />
 
-          <button
+          <motion.button
+            initial={{ x: -120 }}
+            whileInView={{ x: 0 }}
+            transition={{ duration: Animation.delay }}
             type="submit"
             className="outlinedBtn"
             onClick={() => formik.handleSubmit()}
           >
             Submit
-          </button>
+          </motion.button>
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
