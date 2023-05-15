@@ -3,7 +3,7 @@ function About() {
   return (
     <div
       id="about"
-      className="py-28 mx-auto text-center flex flex-col justify-center"
+      className="py-16 sm:py-28 mx-auto text-left  md:text-center flex flex-col justify-center pagePadding"
     >
       <p className="boldText">About Me</p>
       <div className="mt-5 self-center">

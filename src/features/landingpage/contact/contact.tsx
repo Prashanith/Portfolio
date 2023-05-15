@@ -9,7 +9,12 @@ function Contact() {
   const [showDialog, setShowDialog] = useState(false);
   const [desc, setDesc] = useState<string>("");
 
-  async function submitDetails(values: { name: string; email: string; mobile: string; message: string; }) {
+  async function submitDetails(values: {
+    name: string;
+    email: string;
+    mobile: string;
+    message: string;
+  }) {
     setDesc("Submitting Your Details");
     setShowDialog(true);
     setLoading(true);
@@ -22,9 +27,11 @@ function Contact() {
       }, 2000);
     } catch (error) {
       console.log(error);
-      
+
       setDesc("Unknown Error Occured, Try Again Later");
       setLoading(false);
+    } finally {
+      formik.resetForm();
     }
   }
 
@@ -40,7 +47,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className="py-28 flex justify-center items-center bg-bgContact bg-opacity-50 bg-center bg-no-repeat"
+      className="pagePadding py-16 sm:py-28 flex justify-center items-center bg-bgContact bg-opacity-50 bg-center bg-no-repeat"
     >
       {showDialog && (
         <Dialog
@@ -62,7 +69,7 @@ function Contact() {
 
           <p className="absolute self-center ">Contact Me</p>
         </div>
-        <div className="flex flex-col items-stretch space-y-5 px-12 py-8">
+        <div className="flex flex-col items-stretch space-y-5 px-6 py-2 sm:px-12 sm:py-8">
           <input
             id="name"
             name="name"

@@ -25,7 +25,7 @@ a {
 
 @layer utilities {
   .boldText {
-    @apply text-white font-light text-5xl uppercase;
+    @apply text-white font-light text-3xl sm:text-5xl uppercase;
   }
 
   .iText {
@@ -34,6 +34,10 @@ a {
 
   .navItem {
     @apply text-white font-light text-lg hover:underline uppercase;
+  }
+
+  .pagePadding{
+    @apply px-10 sm:px-16;
   }
 }
 
