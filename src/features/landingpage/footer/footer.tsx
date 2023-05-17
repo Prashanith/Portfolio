@@ -98,8 +98,8 @@ function Footer() {
                         gradientTransform="translate(1054.43 -1226.825)"
                         gradientUnits="userSpaceOnUse"
                       >
-                        <stop offset="0" stop-color="#fff"></stop>
-                        <stop offset="1" stop-color="#fff"></stop>
+                        <stop offset="0" stopColor="#fff"></stop>
+                        <stop offset="1" stopColor="#fff"></stop>
                       </linearGradient>
                       <path
                         fill="url(#a)"

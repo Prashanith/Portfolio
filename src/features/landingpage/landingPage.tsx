@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import NavBar from "../../components/navbar/navbar";
 import About from "./about/about";
 import Contact from "./contact/contact.tsx";
@@ -9,15 +8,7 @@ import Skills from "./skills/skills";
 
 function LandingPage() {
   return (
-    <motion.div
-      initial={{ x: "-100vw" }}
-      animate={{ x: 0 }}
-      transition={{
-        stiffness: 130,
-        delay: 0,
-        when: "beforeChildren",
-        staggerChildren: 0.8,
-      }}
+    <div
       className=" bg-primary"
     >
       <NavBar />
@@ -27,7 +18,7 @@ function LandingPage() {
       {/* <Projects /> */}
       <Contact />
       <Footer />
-    </motion.div>
+    </div>
   );
 }
 

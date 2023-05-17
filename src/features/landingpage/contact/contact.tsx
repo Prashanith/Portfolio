@@ -47,14 +47,11 @@ function Contact() {
     onSubmit: (values) => submitDetails(values),
   });
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: 3, type:"spring" }}
+    <div
       id="contact"
       className="pagePadding py-16 sm:py-28 flex justify-center items-center bg-bgContact bg-opacity-50 bg-center bg-no-repeat"
     >
-      {showDialog && (
+      {true && (
         <Dialog
           title={"Alert"}
           description={desc}
@@ -64,7 +61,12 @@ function Contact() {
           setShowDialog={setShowDialog}
         />
       )}
-      <div className="rounded-xl bg-secondary text-center flex flex-col items-stretch justify-center space-y-6 w-[min(85vw,500px)] bg-opacity-70 opacity-70">
+      <motion.div
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 3, type: "spring" }}
+        className="rounded-xl bg-secondary text-center flex flex-col items-stretch justify-center space-y-6 w-[min(85vw,500px)] bg-opacity-70 opacity-70"
+      >
         <div className="relative flex justify-center items-center rounded-t-xl  h-10 bg-black">
           <div className="absolute space-x-2 start-4">
             <span className="h-4 w-4 rounded-full inline-block bg-yellow-500"></span>
@@ -132,8 +134,8 @@ function Contact() {
             Submit
           </motion.button>
         </div>
-      </div>
-    </motion.div>
+      </motion.div>
+    </div>
   );
 }
 

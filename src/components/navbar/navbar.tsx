@@ -30,6 +30,7 @@ function NavBar() {
           {navItems.map((e) => {
             return (
               <motion.li
+                key={e.id}
                 whileHover={{
                   scale: "1.2",
                 }}
@@ -87,7 +88,7 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
       <ul className="flex flex-col space-y-5 px-5 pt-8">
         {navItems.map((e) => {
           return (
-            <li>
+            <li key={e.id}>
               <motion.a
                 whileTap={{
                   scale: 1.3,
