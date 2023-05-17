@@ -9,11 +9,10 @@ function Logo() {
       transition={{ delay: Animation.delay}}
       className="flex flex-row justify-center items-center text-white"
     >
-      <span className="text-[20px]">DEV</span>
+      <span className="text-[27px]">∅</span>
       <span>
         <img src={"/logo_loader.svg"} className="h-[40px]" />
       </span>
-      <span className="text-[20px]">7</span>
     </motion.div>
   );
 }

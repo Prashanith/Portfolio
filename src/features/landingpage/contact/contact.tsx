@@ -51,16 +51,15 @@ function Contact() {
       id="contact"
       className="pagePadding py-16 sm:py-28 flex justify-center items-center bg-bgContact bg-opacity-50 bg-center bg-no-repeat"
     >
-      {true && (
-        <Dialog
-          title={"Alert"}
-          description={desc}
-          showLoader={true}
-          isLoading={loading}
-          onChangeLoading={setLoading}
-          setShowDialog={setShowDialog}
-        />
-      )}
+      <Dialog
+        title={"Alert"}
+        description={desc}
+        showLoader={true}
+        isLoading={loading}
+        onChangeLoading={setLoading}
+        setShowDialog={setShowDialog}
+        showDialog={showDialog}
+      />
       <motion.div
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
