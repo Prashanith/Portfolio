@@ -10,7 +10,7 @@ function SplashScreen() {
   useEffect(() => {
     setTimeout(() => {
       route(AppRoutes.HOME);
-    }, 1500);
+    }, 2100);
   }, []);
 
   return (
@@ -21,7 +21,9 @@ function SplashScreen() {
       className="flex flex-row justify-center items-center h-screen"
     >
       <div className="flex flex-row justify-center items-center">
-        <span className="text-[50px]">∅</span>
+        <span className="text-[46px]">
+          <img src={"/null.svg"} className="h-[80px]" />
+        </span>
         <span>
           <img src={"/logo_loader.svg"} className="h-[80px]" />
         </span>
