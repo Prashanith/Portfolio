@@ -13,7 +13,7 @@ function Logo() {
         <img src={"/null.svg"} className="h-[40px]" />
       </span>
       <span>
-        <img src={"/logo_loader.svg"} className="h-[40px]" />
+        <img src={"/logo_loader.svg"} className="h-[48px]" />
       </span>
     </motion.div>
   );
