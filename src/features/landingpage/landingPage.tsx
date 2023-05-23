@@ -3,7 +3,7 @@ import About from "./about/about";
 import Contact from "./contact/contact.tsx";
 import Footer from "./footer/footer";
 import Intro from "./intro/intro";
-// import Projects from "./projects/projects.tsx";
+import Projects from "./projects/projects.tsx";
 import Skills from "./skills/skills";
 
 function LandingPage() {
@@ -15,7 +15,7 @@ function LandingPage() {
       <Intro />
       <About />
       <Skills />
-      {/* <Projects /> */}
+      <Projects />
       <Contact />
       <Footer />
     </div>
