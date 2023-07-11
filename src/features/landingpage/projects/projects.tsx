@@ -27,10 +27,10 @@ const skills: Project[] = [
     description: "An Application for NGO to help COVID patients",
   },
   {
-    title: "Online Class Scheduler",
+    title: "Qwik Chat",
     logo: "/firebase.svg",
-    url: "https://github.com/Prashanith/ClassScheduler",
-    description: "Online Class Schedules",
+    url: "https://github.com/Prashanith/QwikChat",
+    description: "A Messaging Application",
   },
 ];
 

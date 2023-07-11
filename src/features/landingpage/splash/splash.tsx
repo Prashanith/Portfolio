@@ -15,19 +15,21 @@ function SplashScreen() {
 
   return (
     <motion.div
+      
+      className="flex flex-row justify-center items-center h-screen"
+    >
+      <motion.div 
       initial={{ scale: 1 }}
       animate={{ scale: 1.5 }}
       transition={{ delay: 0, duration: 2, type: "spring", stiffness: 880 }}
-      className="flex flex-row justify-center items-center h-screen"
-    >
-      <div className="flex flex-row justify-center items-center">
+      className="flex flex-row justify-center items-center">
         <span className="text-[46px]">
-          <img src={"/null.svg"} className="h-[80px]" />
+          <img src={"/null.png"} className="h-[5vh]" />
         </span>
         <span>
-          <img src={"/logo_loader.svg"} className="h-[80px]" />
+          <img src={"/infinity.svg"} className="ml-3 h-[10vh]" />
         </span>
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

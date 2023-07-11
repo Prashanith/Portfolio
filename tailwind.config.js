@@ -11,7 +11,7 @@ export default {
         tertiary: "#D21312",
       },
       backgroundImage: {
-        bgContact: "url('/public/map.svg')",
+        bgContact: "url('/map.svg')",
       },
     },
   },
