@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-import { getStorage, ref, getDownloadURL } from "firebase/storage";
+import { getStorage } from "firebase/storage";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -23,33 +23,6 @@ const app = initializeApp(firebaseConfig);
 
 const db = getFirestore(app);
 
-const storage = getStorage();
+const storage = getStorage(app);
 
-async function download_resume() {
-  getDownloadURL(ref(storage, "/prashanith_resume.pdf"))
-    .then((url) => {
-      fetch(url)
-        .then((res) => res.blob())
-        .then((file) => {
-          const tempUrl = URL.createObjectURL(file);
-          const aTag = document.createElement("a");
-          aTag.href = tempUrl;
-          aTag.download = url.replace(/^.*[\\\/]/, "");
-          document.body.appendChild(aTag);
-          aTag.click();
-
-          URL.revokeObjectURL(tempUrl);
-          aTag.remove();
-        })
-        .catch(() => {
-          alert("Failed to download file!");
-        });
-    })
-    .catch((error) => {
-      console.log(error);
-
-      // Handle any errors
-    });
-}
-
-export { db, download_resume };
+export { db, storage };

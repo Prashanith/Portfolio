@@ -8,14 +8,16 @@ function About() {
       transition={{ duration: 3 }}
       viewport={{ once: false }}
       id="about"
-      className="py-16 sm:py-28 mx-auto text-left  md:text-center flex flex-col justify-center md:items-center items-start pagePadding"
+      className="pagePadding mx-auto flex flex-col  items-start justify-center py-16 text-left sm:py-28 md:items-center md:text-center"
     >
       <p className="boldText">About Me</p>
       <div className="mt-5 self-center">
-        <p className="italic font-black">
-          I am B Prashanith, a Full Stack Developer and a part time freelancer.
-          Working on improving the user experience wherever I work is my
-          passion. I believe in KISS (Keep It Simple, Stupid)
+        <p className="font-black italic">
+          Greetings fellow humans! I am B.Prashanith, a coding sorcerer who
+          dabbles in the mystical arts of full stack development. With my
+          wizardly skills, I freelance clients for web/mobile-app solutions.
+          Making the User Experience magisterial wherever I work is my passion.
+          Improving my wizardry and exploring several things right now.
           <br />I am LINUX User, I use ARCH, BTW
         </p>
       </div>
