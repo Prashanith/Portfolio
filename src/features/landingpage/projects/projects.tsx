@@ -46,7 +46,7 @@ function Projects() {
         id="skillsCard"
         className="carousel-horizontal carousel-center carousel
         rounded-box mt-8 w-[calc(100vw-5rem)] 
-        max-w-fit space-x-4 bg-neutral p-4"
+        max-w-fit space-x-4 bg-transparent p-4"
       >
         {skills.map((skill) => {
           return (

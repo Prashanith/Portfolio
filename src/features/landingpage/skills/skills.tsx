@@ -20,7 +20,7 @@ function Skills() {
         id="skillsCard"
         className="mt-8 p-4 space-x-4
         carousel carousel-center carousel-horizontal 
-        bg-neutral rounded-box max-w-fit w-[calc(100vw-5rem)]"
+        bg-transparent rounded-box max-w-fit w-[calc(100vw-5rem)]"
       >
         {skills.map((skill) => {
           return (
