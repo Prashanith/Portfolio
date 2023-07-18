@@ -2,7 +2,7 @@ function Footer() {
   return (
     <footer
       id="footer"
-      className="relative py-12 flex flex-col items-center bg-primary overflow-hidden md:py-20 mt-40"
+      className="relative py-12 flex flex-col items-center bg-primary overflow-hidden md:py-20 mt-28"
     >
       <div className="relative z-[1] container m-auto px-6 md:px-12">
         <div className="m-auto md:w-10/12 lg:w-8/12 xl:w-6/12">
