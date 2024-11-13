@@ -53,7 +53,21 @@ function Intro() {
               <p>RESUME</p>
             )}
           </button>
-          {/* <button className="outlinedBtn">CONTACT ME</button> */}
+          <button
+            className="containedBtn mr-6"
+            onClick={() => download_resume()}
+          >
+            {isLoading ? (
+              <img
+                src="/loader.svg"
+                height={20}
+                width={20}
+                className=" object-contain"
+              />
+            ) : (
+              <p>BUY ME A COFFEE</p>
+            )}
+          </button>
         </div>
       </motion.div>
       <motion.img

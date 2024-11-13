@@ -11,8 +11,8 @@ function About() {
       className="pagePadding mx-auto flex flex-col  items-start justify-center py-16 text-left sm:py-28 md:items-center md:text-center"
     >
       <p className="boldText">About Me</p>
-      <div className="mt-5 self-center">
-        <p className="font-black italic">
+      <div className="mt-5 self-center text-base">
+        <p className="font-black italic text-xl">
           Greetings fellow humans! I am B.Prashanith, a coding sorcerer who
           dabbles in the mystical arts of full stack development. With my
           wizardly skills, I freelance clients for web/mobile-app solutions.
