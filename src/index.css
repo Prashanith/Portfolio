@@ -51,6 +51,7 @@ a {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+  @apply text-sm 2xl:text-base;
 }
 
 ::-webkit-scrollbar-track {
