@@ -14,14 +14,14 @@ a {
   .outlinedBtn {
     @apply text-white border border-gray-800 text-sm
     hover:border-transparent hover:bg-tertiary hover:text-white 
-    font-bold uppercase px-5 py-2 rounded-full outline-none focus:outline-none 
+    font-semibold uppercase px-5 py-2 rounded-full outline-none focus:outline-none 
     ease-linear transition-all duration-150;
   }
 
   .containedBtn {
     @apply text-white border border-gray-800 text-sm
     hover:border-transparent bg-tertiary 
-    font-bold uppercase px-5 py-2 rounded-full outline-none focus:outline-none 
+    font-semibold uppercase px-5 py-2 rounded-full outline-none focus:outline-none 
     ease-linear transition-all duration-150;
   }
 

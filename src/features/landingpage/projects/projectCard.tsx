@@ -14,7 +14,7 @@ function ProjectCard({ title, description, url }: Project) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: Animation.delay }}
-      className="md:w-88 carousel-item relative flex h-40 w-48 flex-col items-start justify-start rounded-lg bg-secondary p-8 shadow-xl"
+      className="md:w-88 carousel-item relative flex h-40 w-48 flex-col items-start justify-start rounded-lg bg-secondary p-8 shadow-2xl"
     >
       <div className="mt-2 text-left">
         <h2 className="text-xl font-bold uppercase text-teal-100">{title}</h2>
