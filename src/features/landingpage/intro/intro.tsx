@@ -5,6 +5,9 @@ import React from "react";
 function Intro() {
   const [isLoading, setIsLoading] = React.useState(false);
 
+  const upiLink = 'upi://pay?pa=9550710377@upi&pn=YourName&tn=Payment+for+Services&am=150&cu=INR';
+
+
   async function download_resume(link: string) {
     setIsLoading(true);
     window.open(link, "_blank");
