@@ -31,7 +31,11 @@ function Intro() {
         <div className='mt-10 flex flex-wrap items-center justify-start gap-2'>
           <button
             className='outlinedBtn mr-6'
-            onClick={() => download_resume("")}
+            onClick={() =>
+              download_resume(
+                "https://drive.google.com/file/d/1ip6L6Wn8IsgqVSNGY6cUTy3Tnc5TEUbG/view?usp=drive_link"
+              )
+            }
           >
             {isLoading ? (
               <img
@@ -46,7 +50,11 @@ function Intro() {
           </button>
           <button
             className='containedBtn mr-6'
-            onClick={() => download_resume("")}
+            onClick={() =>
+              download_resume(
+                "https://drive.google.com/file/d/1ip6L6Wn8IsgqVSNGY6cUTy3Tnc5TEUbG/view?usp=drive_link"
+              )
+            }
           >
             {isLoading ? (
               <img
