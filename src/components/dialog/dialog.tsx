@@ -37,7 +37,7 @@ function Dialog({
         )}
         {!isLoading && (
           <button
-            className="outlinedBtn self-end mt-auto bg-tertiary"
+            className="outlinedBtn self-end mt-auto bg-secondary"
             onClick={() => {
               onChangeLoading(false);
               setShowDialog(false);
