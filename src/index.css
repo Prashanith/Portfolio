@@ -108,5 +108,5 @@ textarea:hover,
 input:focus,
 input:active,
 input:hover {
-  @apply text-white bg-primary h-12 px-3 outline-none outline-offset-0 border-gray-600;
+  @apply text-white bg-primary h-10 px-3 py-1 outline-none outline-offset-0 border-gray-600;
 }
