@@ -8,7 +8,7 @@ export default {
       colors: {
         primary: "#0F1035",
         secondary: "#A50044",
-        tertiary: "#D21312",
+        tertiary: "#43A1D5",
       },
       backgroundImage: {
         bgContact: "url('/map.svg')",
