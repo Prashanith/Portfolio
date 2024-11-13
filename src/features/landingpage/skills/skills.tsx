@@ -2,10 +2,12 @@
 import SkillCard, { Skill } from "./skillCard";
 
 const skills: Skill[] = [
-  { skill: "Firebase", logo: "/firebase.svg" },
   { skill: "Flutter", logo: "/flutter.png" },
   { skill: "MERN", logo: "/mern.png" },
+  { skill: ".NET", logo: "/dotnet.svg" },
+  { skill: "Firebase", logo: "/firebase.svg" },
   { skill: "Tailwind", logo: "/tailwind.png" },
+
 ];
 
 function Skills() {
