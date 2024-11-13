@@ -64,7 +64,7 @@ function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 3, type: "spring" }}
-        className="rounded-xl bg-secondary text-center flex flex-col items-stretch justify-center space-y-6 w-[min(85vw,500px)] bg-opacity-70 opacity-70"
+        className="rounded-xl bg-secondary/30 text-center flex flex-col items-stretch justify-center space-y-6 w-[min(85vw,500px)] bg-opacity-70 opacity-70"
       >
         <div className="relative flex justify-center items-center rounded-t-xl  h-10 bg-black">
           <div className="absolute space-x-2 start-4">

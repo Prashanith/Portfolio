@@ -59,7 +59,7 @@ function Projects() {
             />
           );
         })}
-        <div className='md:w-88 carousel-item relative flex h-40 w-48 flex-col items-center justify-center rounded-lg bg-secondary p-8 shadow-2xl'>
+        <div className='carousel-item relative my-10 flex aspect-square h-28 flex-col items-center justify-center rounded-lg border border-tertiary bg-primary/50 p-8 shadow-sm sm:h-32 md:h-36 lg:h-40 xl:h-44 2xl:h-48'>
           <span>
             More Projects on{" "}
             <a
