@@ -12,8 +12,8 @@ a {
 
 @layer components {
   .outlinedBtn {
-    @apply text-white border border-gray-800 text-sm
-    hover:border-transparent hover:bg-secondary hover:text-white 
+    @apply text-white border-[1pt]  border-gray-800 text-sm
+    hover:border-tertiary  hover:bg-secondary hover:text-white 
     font-semibold uppercase px-5 py-2 rounded-full outline-none focus:outline-none 
     ease-linear transition-all duration-150;
   }
