@@ -5,8 +5,8 @@ import React from "react";
 function Intro() {
   const [isLoading, setIsLoading] = React.useState(false);
 
-  const upiLink = 'upi://pay?pa=9550710377@upi&pn=YourName&tn=Payment+for+Services&am=150&cu=INR';
-
+  const upiLink =
+    "upi://pay?pa=9550710377@upi&pn=YourName&tn=Payment+for+Services&am=150&cu=INR";
 
   async function download_resume(link: string) {
     setIsLoading(true);
@@ -53,11 +53,7 @@ function Intro() {
           </button>
           <button
             className='containedBtn mr-6'
-            onClick={() =>
-              download_resume(
-                "https://drive.google.com/file/d/1ip6L6Wn8IsgqVSNGY6cUTy3Tnc5TEUbG/view?usp=drive_link"
-              )
-            }
+            onClick={() => download_resume(upiLink)}
           >
             {isLoading ? (
               <img
