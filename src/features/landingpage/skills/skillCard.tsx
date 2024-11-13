@@ -12,7 +12,7 @@ function SkillCard({ skill, logo }: Skill) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: Animation.delay }}
-      className=" relative carousel-item flex flex-col items-center justify-center h-40 w-32 md:h-60 md:w-48 shadow-xl p-8 bg-secondary rounded-lg"
+      className=" relative carousel-item flex flex-col items-center justify-center h-40 w-32 md:h-60 md:w-48 shadow-xl p-8 bg-primary/50 shadow-tertiary rounded-lg"
     >
       <img src={logo} alt="image" className="grow rounded-xl object-contain" />
       <div className="text-center mt-4">

@@ -24,7 +24,7 @@ function Intro() {
         <p className='boldText'>
           I am
           <br />
-          <span className=' text-5xl font-medium text-tertiary sm:text-6xl md:text-8xl'>
+          <span className=' text-5xl font-medium text-secondary sm:text-6xl md:text-8xl'>
             Prashanith
           </span>
           <br />
