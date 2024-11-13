@@ -127,7 +127,7 @@ function Contact() {
             whileInView={{ x: 0 }}
             transition={{ duration: Animation.delay }}
             type="submit"
-            className="outlinedBtn"
+            className="containedBtn"
             onClick={() => formik.handleSubmit()}
           >
             Submit
