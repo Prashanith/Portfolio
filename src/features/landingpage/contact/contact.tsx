@@ -49,7 +49,7 @@ function Contact() {
   return (
     <div
       id="contact"
-      className="pagePadding py-16 sm:py-28 flex justify-center items-center bg-bgContact bg-opacity-50 bg-center bg-no-repeat"
+      className="pagePadding flex items-center justify-center bg-opacity-50 bg-bgContact bg-center bg-no-repeat py-16 sm:py-28"
     >
       <Dialog
         title={"Alert"}
@@ -64,13 +64,13 @@ function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 3, type: "spring" }}
-        className="rounded-xl bg-secondary/30 text-center flex flex-col items-stretch justify-center space-y-6 w-[min(85vw,500px)] bg-opacity-70 opacity-70"
+        className="flex w-[min(85vw,500px)] flex-col items-stretch justify-center space-y-6 rounded-xl bg-secondary/30 bg-opacity-70 text-center opacity-70"
       >
-        <div className="relative flex justify-center items-center rounded-t-xl  h-10 bg-black">
-          <div className="absolute space-x-2 start-4">
-            <span className="h-4 w-4 rounded-full inline-block bg-yellow-500"></span>
-            <span className="h-4 w-4 rounded-full inline-block bg-red-500"></span>
-            <span className="h-4 w-4 rounded-full inline-block bg-green-500"></span>
+        <div className="relative flex h-10 items-center justify-center  rounded-t-xl bg-black">
+          <div className="absolute start-4 space-x-2">
+            <span className="inline-block h-4 w-4 rounded-full bg-yellow-500"></span>
+            <span className="inline-block h-4 w-4 rounded-full bg-red-500"></span>
+            <span className="inline-block h-4 w-4 rounded-full bg-green-500"></span>
           </div>
 
           <p className="absolute self-center ">Contact Me</p>

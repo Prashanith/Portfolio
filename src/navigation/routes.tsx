@@ -1,7 +1,4 @@
-
-
-export enum AppRoutes{
-SPLASH = "/",
-HOME =  "/home"
-
+export enum AppRoutes {
+  SPLASH = "/",
+  HOME = "/home",
 }

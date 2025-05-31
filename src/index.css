@@ -1,6 +1,6 @@
 @import "https://unpkg.com/open-props";
 @import "https://unpkg.com/open-props/normalize.min.css";
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 
 @tailwind base;
 @tailwind components;
@@ -12,43 +12,42 @@ a {
 
 @layer components {
   .outlinedBtn {
-    @apply text-white border-[1pt]  border-gray-800 text-sm
-    hover:border-tertiary  hover:bg-secondary hover:text-white 
-    font-semibold uppercase px-5 py-2 rounded-full outline-none focus:outline-none 
-    ease-linear transition-all duration-150;
+    @apply rounded-full border-[1pt]  border-gray-800 px-5
+    py-2  text-sm font-semibold 
+    uppercase text-white outline-none transition-all duration-150 ease-linear hover:border-tertiary 
+    hover:bg-secondary hover:text-white focus:outline-none;
   }
 
   .containedBtn {
-    @apply text-white border border-gray-800 text-sm
-    hover:border-transparent bg-secondary 
-    font-semibold uppercase px-5 py-2 rounded-full outline-none focus:outline-none 
-    ease-linear transition-all duration-150;
+    @apply rounded-full border border-gray-800 bg-secondary
+    px-5 py-2 
+    text-sm font-semibold uppercase text-white outline-none transition-all duration-150 
+    ease-linear hover:border-transparent focus:outline-none;
   }
 
   .fabButton {
-    @apply rounded-full border-collapse;
+    @apply border-collapse rounded-full;
   }
 }
 
 @layer utilities {
-  .normalText{
-    @apply text-sm 2xl:text-base app-font;
+  .normalText {
+    @apply app-font text-sm 2xl:text-base;
   }
 
-
   .boldText {
-    @apply text-white font-light text-3xl sm:text-5xl uppercase;
+    @apply text-3xl font-light uppercase text-white sm:text-5xl;
   }
 
   .iText {
-    @apply text-white font-light text-3xl;
+    @apply text-3xl font-light text-white;
   }
 
   .navItem {
-    @apply text-white font-light text-lg uppercase;
+    @apply text-lg font-light uppercase text-white;
   }
 
-  .pagePadding{
+  .pagePadding {
     @apply px-10 sm:px-16;
   }
 }
@@ -65,7 +64,7 @@ a {
   -webkit-text-size-adjust: 100%;
 }
 
-.app-font{
+.app-font {
   font-family: "Ubuntu Mono", monospace;
   font-weight: 400;
   font-style: normal;
@@ -91,8 +90,7 @@ a {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: bottom;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1027%26quot%3b)' fill='none'%3e%3cpath d='M43 250L293 0L477.5 0L227.5 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M274.6 250L524.6 0L818.6 0L568.6 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M481.20000000000005 250L731.2 0L1026.7 0L776.7 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M739.8000000000001 250L989.8000000000001 0L1069.3000000000002 0L819.3000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M1408 250L1158 0L997.5 0L1247.5 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3cpath d='M1188.4 250L938.4000000000001 0L734.4000000000001 0L984.4000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3cpath d='M954.8 250L704.8 0L595.3 0L845.3 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3cpath d='M694.1999999999999 250L444.19999999999993 0L367.69999999999993 0L617.6999999999999 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3cpath d='M1247.9074588084875 250L1440 57.90745880848743L1440 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 250L192.09254119151257 250L 0 57.90745880848743z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1027'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1028'%3e%3cstop stop-color='rgba(48%2c 43%2c 99%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(48%2c 43%2c 99%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1029'%3e%3cstop stop-color='rgba(48%2c 43%2c 99%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(48%2c 43%2c 99%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e")
-  
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.dev/svgjs' width='1440' height='250' preserveAspectRatio='none' viewBox='0 0 1440 250'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1027%26quot%3b)' fill='none'%3e%3cpath d='M43 250L293 0L477.5 0L227.5 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M274.6 250L524.6 0L818.6 0L568.6 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M481.20000000000005 250L731.2 0L1026.7 0L776.7 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M739.8000000000001 250L989.8000000000001 0L1069.3000000000002 0L819.3000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M1408 250L1158 0L997.5 0L1247.5 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3cpath d='M1188.4 250L938.4000000000001 0L734.4000000000001 0L984.4000000000001 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3cpath d='M954.8 250L704.8 0L595.3 0L845.3 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3cpath d='M694.1999999999999 250L444.19999999999993 0L367.69999999999993 0L617.6999999999999 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3cpath d='M1247.9074588084875 250L1440 57.90745880848743L1440 250z' fill='url(%26quot%3b%23SvgjsLinearGradient1028%26quot%3b)'%3e%3c/path%3e%3cpath d='M0 250L192.09254119151257 250L 0 57.90745880848743z' fill='url(%26quot%3b%23SvgjsLinearGradient1029%26quot%3b)'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1027'%3e%3crect width='1440' height='250' fill='white'%3e%3c/rect%3e%3c/mask%3e%3clinearGradient x1='0%25' y1='100%25' x2='100%25' y2='0%25' id='SvgjsLinearGradient1028'%3e%3cstop stop-color='rgba(48%2c 43%2c 99%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(48%2c 43%2c 99%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3clinearGradient x1='100%25' y1='100%25' x2='0%25' y2='0%25' id='SvgjsLinearGradient1029'%3e%3cstop stop-color='rgba(48%2c 43%2c 99%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-opacity='0' stop-color='rgba(48%2c 43%2c 99%2c 1)' offset='0.66'%3e%3c/stop%3e%3c/linearGradient%3e%3c/defs%3e%3c/svg%3e");
 }
 
 .italic {
@@ -108,5 +106,5 @@ textarea:hover,
 input:focus,
 input:active,
 input:hover {
-  @apply text-white bg-primary h-10 px-3 py-1 outline-none outline-offset-0 border-gray-600;
+  @apply h-10 border-gray-600 bg-primary px-3 py-1 text-white outline-none outline-offset-0;
 }

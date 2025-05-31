@@ -14,15 +14,13 @@ function SplashScreen() {
   }, []);
 
   return (
-    <motion.div
-      
-      className="flex flex-row justify-center items-center h-screen"
-    >
-      <motion.div 
-      initial={{ scale: 1 }}
-      animate={{ scale: 1.5 }}
-      transition={{ delay: 0, duration: 2, type: "spring", stiffness: 880 }}
-      className="flex flex-row justify-center items-center">
+    <motion.div className="flex h-screen flex-row items-center justify-center">
+      <motion.div
+        initial={{ scale: 1 }}
+        animate={{ scale: 1.5 }}
+        transition={{ delay: 0, duration: 2, type: "spring", stiffness: 880 }}
+        className="flex flex-row items-center justify-center"
+      >
         <span className="text-[46px]">
           <img src={"/null.png"} className="h-[5vh]" />
         </span>

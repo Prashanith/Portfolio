@@ -7,7 +7,7 @@ function Logo() {
       initial={{ x: "-100vw" }}
       animate={{ x: 0 }}
       transition={{ delay: Animation.delay }}
-      className="flex flex-row justify-center items-center text-white"
+      className="flex flex-row items-center justify-center text-white"
     >
       <span>
         <img src={"/null.png"} className="h-[20px]" />

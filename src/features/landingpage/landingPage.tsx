@@ -8,9 +8,7 @@ import Skills from "./skills/skills";
 
 function LandingPage() {
   return (
-    <div
-      className=" bg-primary normalText"
-    >
+    <div className=" normalText bg-primary">
       <NavBar />
       <Intro />
       <About />

@@ -22,11 +22,11 @@ const navItems: NavItem[] = [
 function NavBar() {
   const [showSideNav, toggleNav] = useState<boolean>(false);
   return (
-    <div className="flex flex-row justify-between items-center h-[70px] text-tertiary pagePadding">
+    <div className="pagePadding flex h-[70px] flex-row items-center justify-between text-tertiary">
       <Logo />
 
       <div>
-        <ul className="sm:flex sm:space-x-5 hidden">
+        <ul className="hidden sm:flex sm:space-x-5">
           {navItems.map((e) => {
             return (
               <motion.li
@@ -60,7 +60,7 @@ function NavBar() {
           viewBox="0 0 24 24"
           strokeWidth={1.5}
           stroke="currentColor"
-          className="w-6 h-6"
+          className="h-6 w-6"
         >
           <path
             strokeLinecap="round"
@@ -78,8 +78,8 @@ function NavBar() {
 function SideNavigation({ showNav, setShownav }: INavItem) {
   return (
     <div
-      className={`h-screen bg-secondary fixed top-0 left-0 z-10 w-48 transition-all ease-out duration-[1500] ${
-        showNav ? "sm:invisible visible" : "invisible"
+      className={`fixed left-0 top-0 z-10 h-screen w-48 bg-secondary transition-all duration-[1500] ease-out ${
+        showNav ? "visible sm:invisible" : "invisible"
       }`}
     >
       <div className="mt-5">

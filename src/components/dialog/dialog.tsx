@@ -7,7 +7,7 @@ interface IDialogProps {
   showLoader: boolean;
   isLoading: boolean;
   onChangeLoading: React.Dispatch<React.SetStateAction<boolean>>;
-  showDialog:boolean;
+  showDialog: boolean;
   setShowDialog: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
@@ -21,14 +21,18 @@ function Dialog({
   setShowDialog,
 }: IDialogProps) {
   return (
-    <div className={`dialog fixed w-full h-full z-30 top-0 left-0 overflow-auto backdrop-blur-md ${showDialog?"block":"hidden"}`}>
+    <div
+      className={`dialog fixed left-0 top-0 z-30 h-full w-full overflow-auto backdrop-blur-md ${
+        showDialog ? "block" : "hidden"
+      }`}
+    >
       <div
-        className="dialog-content h-60 w-[min(350px,90vw)] 
-      bg-secondary shadow-grey-950 shadow-xl rounded-xl
-      flex flex-col justify-start items-center p-[20px] m-auto relative top-[32vh]
+        className="dialog-content shadow-grey-950 relative 
+      top-[32vh] m-auto flex h-60
+      w-[min(350px,90vw)] flex-col items-center justify-start rounded-xl bg-secondary p-[20px] shadow-xl
       "
       >
-        <p className="font-bold text-lg uppercase">{title}</p>
+        <p className="text-lg font-bold uppercase">{title}</p>
         <p className="mt-6 text-center">{description}</p>
         {showLoader && isLoading && (
           <p>
@@ -37,7 +41,7 @@ function Dialog({
         )}
         {!isLoading && (
           <button
-            className="outlinedBtn self-end mt-auto bg-secondary"
+            className="outlinedBtn mt-auto self-end bg-secondary"
             onClick={() => {
               onChangeLoading(false);
               setShowDialog(false);

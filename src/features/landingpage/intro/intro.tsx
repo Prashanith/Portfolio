@@ -15,25 +15,25 @@ function Intro() {
   }
 
   return (
-    <div className='pagePadding flex h-[calc(100vh-70px)] flex-row items-center justify-between'>
+    <div className="pagePadding flex h-[calc(100vh-70px)] flex-row items-center justify-between">
       <motion.div
         initial={{ x: "-100vw" }}
         animate={{ x: 0 }}
         transition={{ delay: Animation.delay }}
       >
-        <p className='boldText'>
+        <p className="boldText">
           I am
           <br />
-          <span className=' text-5xl font-medium text-secondary sm:text-6xl md:text-8xl'>
+          <span className=" text-5xl font-medium text-secondary sm:text-6xl md:text-8xl">
             Prashanith
           </span>
           <br />
           <span>Software Developer</span>
         </p>
         {/* <p className="mt-10 text-lg font-medium">I call myself DEV007</p> */}
-        <div className='mt-10 flex flex-wrap items-center justify-start gap-2'>
+        <div className="mt-10 flex flex-wrap items-center justify-start gap-2">
           <button
-            className='outlinedBtn mr-6'
+            className="outlinedBtn mr-6"
             onClick={() =>
               download_resume(
                 "https://drive.google.com/file/d/1ip6L6Wn8IsgqVSNGY6cUTy3Tnc5TEUbG/view?usp=drive_link"
@@ -42,25 +42,25 @@ function Intro() {
           >
             {isLoading ? (
               <img
-                src='/loader.svg'
+                src="/loader.svg"
                 height={20}
                 width={20}
-                className=' object-contain'
+                className=" object-contain"
               />
             ) : (
               <p>RESUME</p>
             )}
           </button>
           <button
-            className='containedBtn mr-6'
+            className="containedBtn mr-6"
             onClick={() => download_resume(upiLink)}
           >
             {isLoading ? (
               <img
-                src='/loader.svg'
+                src="/loader.svg"
                 height={20}
                 width={20}
-                className=' object-contain'
+                className=" object-contain"
               />
             ) : (
               <p>BUY ME A COFFEE</p>
@@ -72,8 +72,8 @@ function Intro() {
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
         transition={{ delay: Animation.delay }}
-        src='/intro.svg'
-        className='hidden w-1/2 md:block'
+        src="/intro.svg"
+        className="hidden w-1/2 md:block"
       />
     </div>
   );

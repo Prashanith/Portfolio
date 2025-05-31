@@ -12,11 +12,15 @@ function SkillCard({ skill, logo }: Skill) {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: Animation.delay }}
-      className="my-10 relative carousel-item flex flex-col items-center justify-center h-28 sm:h-32 md:h-36 lg:h-40 xl:h-44 2xl:h-48 aspect-square shadow-sm p-8 bg-primary/50 border-tertiary border-[1pt] rounded-lg hover:shadow-tertiary hover:scale-105 transition-all duration-150"
+      className="carousel-item relative my-10 flex aspect-square h-28 flex-col items-center justify-center rounded-lg border-[1pt] border-tertiary bg-primary/50 p-8 shadow-sm transition-all duration-150 hover:scale-105 hover:shadow-tertiary sm:h-32 md:h-36 lg:h-40 xl:h-44 2xl:h-48"
     >
-      <img src={logo} alt="image" className="rounded-xl object-fill w-full h-full p-5" />
-      <div className="text-center mt-4">
-        <h2 className="font-bold uppercase text-xl text-teal-100">{skill}</h2>
+      <img
+        src={logo}
+        alt="image"
+        className="h-full w-full rounded-xl object-fill p-5"
+      />
+      <div className="mt-4 text-center">
+        <h2 className="text-xl font-bold uppercase text-teal-100">{skill}</h2>
       </div>
     </motion.div>
   );

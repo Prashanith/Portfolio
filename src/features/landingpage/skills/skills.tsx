@@ -7,22 +7,21 @@ const skills: Skill[] = [
   { skill: ".NET", logo: "/dotnet.svg" },
   { skill: "Firebase", logo: "/firebase.svg" },
   { skill: "Tailwind", logo: "/tailwind.png" },
-
 ];
 
 function Skills() {
   return (
     <div
       id="skills"
-      className="flex flex-col items-start md:items-center justify-start py-28 pagePadding"
+      className="pagePadding flex flex-col items-start justify-start py-28 md:items-center"
     >
       <p className="boldText uppercase">What I'm Skilled At</p>
 
       <div
         id="skillsCard"
-        className="mt-8 p-4 space-x-4
-        carousel carousel-center carousel-horizontal 
-        bg-transparent rounded-box w-[calc(100vw-5rem)]"
+        className="carousel-horizontal carousel carousel-center
+        rounded-box mt-8 w-[calc(100vw-5rem)] 
+        space-x-4 bg-transparent p-4"
       >
         {skills.map((skill) => {
           return (
