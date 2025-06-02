@@ -18,9 +18,9 @@ interface INavItem {
 
 const navItems: NavItem[] = [
   { name: "BEYOND CODE", id: "beyondCode", route: AppRoutes.BEYONGCODE },
-  { name: "SKILLS", id: "skills" },
-  { name: "CONTACT", id: "contact" },
-  { name: "ABOUT ME", id: "about" },
+  { name: "SKILLS", id: "skills", route: AppRoutes.HOME },
+  { name: "CONTACT", id: "contact", route: AppRoutes.HOME },
+  { name: "ABOUT ME", id: "about", route: AppRoutes.HOME },
 ];
 
 function NavBar() {
