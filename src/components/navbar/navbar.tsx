@@ -2,10 +2,13 @@ import { useState } from "react";
 import Logo from "../logo/logo";
 import { motion } from "framer-motion";
 import { Animation } from "../../config/animationConfig";
+import { useNavigate } from "react-router-dom";
+import { AppRoutes } from "../../navigation/routes";
 
 interface NavItem {
   name: string;
   id: string;
+  route?: string;
 }
 
 interface INavItem {
@@ -14,19 +17,21 @@ interface INavItem {
 }
 
 const navItems: NavItem[] = [
+  { name: "BEYOND CODE", id: "beyondCode", route: AppRoutes.BEYONGCODE },
   { name: "SKILLS", id: "skills" },
   { name: "CONTACT", id: "contact" },
   { name: "ABOUT ME", id: "about" },
 ];
 
 function NavBar() {
+  const navigate = useNavigate();
   const [showSideNav, toggleNav] = useState<boolean>(false);
   return (
-    <div className="pagePadding flex h-[70px] flex-row items-center justify-between text-tertiary">
+    <div className='pagePadding flex h-[70px] flex-row items-center justify-between text-tertiary'>
       <Logo />
 
       <div>
-        <ul className="hidden sm:flex sm:space-x-5">
+        <ul className='hidden sm:flex sm:space-x-5'>
           {navItems.map((e) => {
             return (
               <motion.li
@@ -43,7 +48,8 @@ function NavBar() {
                     delay: 0.6,
                   }}
                   href={`#${e.id}`}
-                  className="navItem"
+                  className='navItem'
+                  onClick={() => e.route && navigate(e.route)}
                 >
                   {e.name}
                 </motion.a>
@@ -53,19 +59,19 @@ function NavBar() {
         </ul>
       </div>
 
-      <div className="sm:hidden" onClick={() => toggleNav((s) => !s)}>
+      <div className='sm:hidden' onClick={() => toggleNav((s) => !s)}>
         <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
+          xmlns='http://www.w3.org/2000/svg'
+          fill='none'
+          viewBox='0 0 24 24'
           strokeWidth={1.5}
-          stroke="currentColor"
-          className="h-6 w-6"
+          stroke='currentColor'
+          className='h-6 w-6'
         >
           <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M3.75 9h16.5m-16.5 6.75h16.5"
+            strokeLinecap='round'
+            strokeLinejoin='round'
+            d='M3.75 9h16.5m-16.5 6.75h16.5'
           />
         </svg>
       </div>
@@ -82,10 +88,10 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
         showNav ? "visible sm:invisible" : "invisible"
       }`}
     >
-      <div className="mt-5">
+      <div className='mt-5'>
         <Logo />
       </div>
-      <ul className="flex flex-col space-y-5 px-5 pt-8">
+      <ul className='flex flex-col space-y-5 px-5 pt-8'>
         {navItems.map((e) => {
           return (
             <li key={e.id}>
@@ -95,7 +101,7 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
                 }}
                 transition={{ type: "spring", stiffness: 300 }}
                 href={`#${e.id}`}
-                className="navItem"
+                className='navItem'
                 onClick={() => {
                   if (showNav) {
                     setShownav(false);
