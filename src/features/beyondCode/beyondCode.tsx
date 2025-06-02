@@ -1,7 +1,7 @@
 import NavBar from "../../components/navbar/navbar";
 import SportCard from "./components/sportCard/sportCard";
 
-function LandingPage() {
+function BeyondCode() {
   return (
     <div className=' normalText bg-primary'>
       <NavBar />
@@ -22,4 +22,4 @@ function LandingPage() {
   );
 }
 
-export default LandingPage;
+export default BeyondCode;
