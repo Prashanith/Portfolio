@@ -13,7 +13,7 @@ function About() {
       <p className="boldText">About Me</p>
       <div className="mt-5 self-center text-base">
         <p className="text-xl font-black italic">
-          Greetings fellow humans! I am B.Prashanith, a coding sorcerer who
+          Greetings fellow humans! I am Prashanith, a coding sorcerer who
           dabbles in the mystical arts of full stack development. With my
           wizardly skills, I freelance clients for web/mobile-app solutions.
           Making the User Experience magisterial wherever I work is my passion.

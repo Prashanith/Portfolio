@@ -2,6 +2,8 @@
 import SkillCard, { Skill } from "./skillCard";
 
 const skills: Skill[] = [
+  { skill: "Gemini", logo: "/gemini.png" },
+  { skill: "Open AI", logo: "/ai.svg" },
   { skill: "Flutter", logo: "/flutter.png" },
   { skill: "MERN", logo: "/mern.png" },
   { skill: ".NET", logo: "/dotnet.svg" },
@@ -21,7 +23,7 @@ function Skills() {
         id="skillsCard"
         className="carousel-horizontal carousel carousel-center
         rounded-box mt-8 w-[calc(100vw-5rem)] 
-        space-x-4 bg-transparent p-4"
+        max-w-fit space-x-4 bg-transparent p-4"
       >
         {skills.map((skill) => {
           return (
