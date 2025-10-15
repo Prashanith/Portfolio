@@ -8,7 +8,7 @@ interface ISportCard {
   invert: boolean;
 }
 
-function SportCard({ title, description, image, invert }: ISportCard) {
+function SportCard({ title, description, image }: ISportCard) {
   return (
     <motion.div
       initial={{ opacity: 0 }}
