@@ -4,6 +4,14 @@ import { motion } from "framer-motion";
 import { Animation } from "../../config/animationConfig";
 import { useNavigate } from "react-router-dom";
 import { AppRoutes } from "../../navigation/routes";
+import CIcon from "@coreui/icons-react";
+import {
+  cibArchLinux,
+  cibVisualStudioCode,
+  cilFootball,
+  cilRunning,
+  cilShortText,
+} from "@coreui/icons";
 
 interface NavItem {
   name: string;
@@ -29,6 +37,8 @@ function NavBar() {
   return (
     <div className='pagePadding flex h-[70px] flex-row items-center justify-between text-tertiary'>
       <Logo />
+
+      <GlassNavigation />
 
       <div>
         <ul className='hidden sm:flex sm:space-x-5'>
@@ -114,6 +124,24 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
           );
         })}
       </ul>
+    </div>
+  );
+}
+
+function GlassNavigation() {
+  return (
+    <div className='wrapper dock-container'>
+      <div className='liquidGlass-wrapper menu'>
+        <div className='liquidGlass-wrapper'></div>
+        <div className='liquidGlass-effect'></div>
+        <div className='liquidGlass-tint'></div>
+        <div className='liquidGlass-text'>
+          <CIcon icon={cilRunning} className='dock-item' />
+          <CIcon icon={cibVisualStudioCode} className='dock-item' />
+          <CIcon icon={cilShortText} className='dock-item' />
+          <CIcon icon={cibArchLinux} className='dock-item' />
+        </div>
+      </div>
     </div>
   );
 }

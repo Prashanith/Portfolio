@@ -11,6 +11,8 @@
     "format": "prettier --write ."
   },
   "dependencies": {
+    "@coreui/icons": "^3.0.1",
+    "@coreui/icons-react": "^2.3.0",
     "daisyui": "^2.51.6",
     "firebase": "^9.22.0",
     "formik": "^2.2.9",
