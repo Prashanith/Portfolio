@@ -1,10 +1,10 @@
 import Logo from "../logo/logo";
-import { motion } from "framer-motion";
-import { AppRoutes } from "../../navigation/routes";
+// import { motion } from "framer-motion";
+// import { AppRoutes } from "../../navigation/routes";
 import NavigationDock from "./navigationDock";
-import { Animation } from "../../config/animationConfig";
-import { useNavigate } from "react-router-dom";
-import { useState } from "react";
+// import { Animation } from "../../config/animationConfig";
+// import { useNavigate } from "react-router-dom";
+// import { useState } from "react";
 
 export interface NavItem {
   name: string;
@@ -17,12 +17,12 @@ export interface INavItem {
   setShownav: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const navItems: NavItem[] = [
-  { name: "BEYOND CODE", id: "beyondCode", route: AppRoutes.BEYONDCODE },
-  { name: "SKILLS", id: "skills", route: AppRoutes.HOME },
-  { name: "CONTACT", id: "contact", route: AppRoutes.HOME },
-  { name: "ABOUT ME", id: "about", route: AppRoutes.HOME },
-];
+// const navItems: NavItem[] = [
+//   { name: "BEYOND CODE", id: "beyondCode", route: AppRoutes.BEYONDCODE },
+//   { name: "SKILLS", id: "skills", route: AppRoutes.HOME },
+//   { name: "CONTACT", id: "contact", route: AppRoutes.HOME },
+//   { name: "ABOUT ME", id: "about", route: AppRoutes.HOME },
+// ];
 
 function NavBar() {
   // const navigate = useNavigate();
@@ -84,41 +84,41 @@ function NavBar() {
   );
 }
 
-function SideNavigation({ showNav, setShownav }: INavItem) {
-  return (
-    <div
-      className={`fixed left-0 top-0 z-10 h-screen w-48 bg-secondary transition-all duration-[1500] ease-out ${
-        showNav ? "visible sm:invisible" : "invisible"
-      }`}
-    >
-      <div className='mt-5'>
-        <Logo />
-      </div>
-      <ul className='flex flex-col space-y-5 px-5 pt-8'>
-        {navItems.map((e) => {
-          return (
-            <li key={e.id}>
-              <motion.a
-                whileTap={{
-                  scale: 1.3,
-                }}
-                transition={{ type: "spring", stiffness: 300 }}
-                href={`#${e.id}`}
-                className='navItem'
-                onClick={() => {
-                  if (showNav) {
-                    setShownav(false);
-                  }
-                }}
-              >
-                {e.name}
-              </motion.a>
-            </li>
-          );
-        })}
-      </ul>
-    </div>
-  );
-}
+// function SideNavigation({ showNav, setShownav }: INavItem) {
+//   return (
+//     <div
+//       className={`fixed left-0 top-0 z-10 h-screen w-48 bg-secondary transition-all duration-[1500] ease-out ${
+//         showNav ? "visible sm:invisible" : "invisible"
+//       }`}
+//     >
+//       <div className='mt-5'>
+//         <Logo />
+//       </div>
+//       <ul className='flex flex-col space-y-5 px-5 pt-8'>
+//         {navItems.map((e) => {
+//           return (
+//             <li key={e.id}>
+//               <motion.a
+//                 whileTap={{
+//                   scale: 1.3,
+//                 }}
+//                 transition={{ type: "spring", stiffness: 300 }}
+//                 href={`#${e.id}`}
+//                 className='navItem'
+//                 onClick={() => {
+//                   if (showNav) {
+//                     setShownav(false);
+//                   }
+//                 }}
+//               >
+//                 {e.name}
+//               </motion.a>
+//             </li>
+//           );
+//         })}
+//       </ul>
+//     </div>
+//   );
+// }
 
 export default NavBar;
