@@ -9,7 +9,7 @@ function ApplicationRouter() {
     <Routes>
       <Route path={AppRoutes.SPLASH} element={<SplashScreen />} />
       <Route path={AppRoutes.HOME} element={<LandingPage />} />
-      <Route path={AppRoutes.BEYONGCODE} element={<BeyondCode />} />
+      <Route path={AppRoutes.BEYONDCODE} element={<BeyondCode />} />
     </Routes>
   );
 }

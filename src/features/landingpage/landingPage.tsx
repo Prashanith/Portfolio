@@ -8,7 +8,7 @@ import Skills from "./skills/skills";
 
 function LandingPage() {
   return (
-    <div className=" normalText bg-primary">
+    <div className="bg-bgTheme bg-fixed bg-left">
       <NavBar />
       <Intro />
       <About />

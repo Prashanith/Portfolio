@@ -1,46 +1,39 @@
-import { useState } from "react";
 import Logo from "../logo/logo";
 import { motion } from "framer-motion";
+import { AppRoutes } from "../../navigation/routes";
+import NavigationDock from "./navigationDock";
 import { Animation } from "../../config/animationConfig";
 import { useNavigate } from "react-router-dom";
-import { AppRoutes } from "../../navigation/routes";
-import CIcon from "@coreui/icons-react";
-import {
-  cibArchLinux,
-  cibVisualStudioCode,
-  cilFootball,
-  cilRunning,
-  cilShortText,
-} from "@coreui/icons";
+import { useState } from "react";
 
-interface NavItem {
+export interface NavItem {
   name: string;
   id: string;
   route?: string;
 }
 
-interface INavItem {
+export interface INavItem {
   showNav: boolean;
   setShownav: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
 const navItems: NavItem[] = [
-  { name: "BEYOND CODE", id: "beyondCode", route: AppRoutes.BEYONGCODE },
+  { name: "BEYOND CODE", id: "beyondCode", route: AppRoutes.BEYONDCODE },
   { name: "SKILLS", id: "skills", route: AppRoutes.HOME },
   { name: "CONTACT", id: "contact", route: AppRoutes.HOME },
   { name: "ABOUT ME", id: "about", route: AppRoutes.HOME },
 ];
 
 function NavBar() {
-  const navigate = useNavigate();
-  const [showSideNav, toggleNav] = useState<boolean>(false);
+  // const navigate = useNavigate();
+  // const [showSideNav, toggleNav] = useState<boolean>(false);
   return (
     <div className='pagePadding flex h-[70px] flex-row items-center justify-between text-tertiary'>
       <Logo />
 
-      <GlassNavigation />
+      <NavigationDock />
 
-      <div>
+      {/* <div>
         <ul className='hidden sm:flex sm:space-x-5'>
           {navItems.map((e) => {
             return (
@@ -84,9 +77,9 @@ function NavBar() {
             d='M3.75 9h16.5m-16.5 6.75h16.5'
           />
         </svg>
-      </div>
+      </div> */}
 
-      <SideNavigation showNav={showSideNav} setShownav={toggleNav} />
+      {/* <SideNavigation showNav={showSideNav} setShownav={toggleNav} /> */}
     </div>
   );
 }
@@ -124,24 +117,6 @@ function SideNavigation({ showNav, setShownav }: INavItem) {
           );
         })}
       </ul>
-    </div>
-  );
-}
-
-function GlassNavigation() {
-  return (
-    <div className='wrapper dock-container'>
-      <div className='liquidGlass-wrapper menu'>
-        <div className='liquidGlass-wrapper'></div>
-        <div className='liquidGlass-effect'></div>
-        <div className='liquidGlass-tint'></div>
-        <div className='liquidGlass-text'>
-          <CIcon icon={cilRunning} className='dock-item' />
-          <CIcon icon={cibVisualStudioCode} className='dock-item' />
-          <CIcon icon={cilShortText} className='dock-item' />
-          <CIcon icon={cibArchLinux} className='dock-item' />
-        </div>
-      </div>
     </div>
   );
 }

@@ -22,10 +22,10 @@ function SplashScreen() {
         className="flex flex-row items-center justify-center"
       >
         <span className="text-[46px] ">
-          <img src={"/null.svg"} className="h-[5vh] text-primary" />
+          <img src={"/logo/null.svg"} className="h-[5vh] text-primary" />
         </span>
         <span>
-          <img src={"/infinity.svg"} className="ml-3 h-[10vh]" />
+          <img src={"/logo/infinity.svg"} className="ml-3 h-[10vh]" />
         </span>
       </motion.div>
     </motion.div>

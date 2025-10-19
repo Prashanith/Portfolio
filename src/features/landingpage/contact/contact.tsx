@@ -48,8 +48,8 @@ function Contact() {
   });
   return (
     <div
-      id="contact"
-      className="pagePadding flex items-center justify-center bg-opacity-50 bg-bgContact bg-center bg-no-repeat py-16 sm:py-28"
+      id='contact'
+      className='pagePadding mx-10 flex items-center justify-center bg-opacity-50 bg-bgContact bg-center bg-no-repeat py-16 sm:mx-16 sm:py-28'
     >
       <Dialog
         title={"Alert"}
@@ -64,38 +64,40 @@ function Contact() {
         initial={{ opacity: 0 }}
         whileInView={{ opacity: 1 }}
         transition={{ duration: 3, type: "spring" }}
-        className="flex w-[min(85vw,500px)] flex-col items-stretch justify-center space-y-6 rounded-xl bg-secondary/30 bg-opacity-70 text-center opacity-70"
+        className='flex w-[min(85vw,500px)] flex-col items-stretch justify-center rounded-xl text-center'
       >
-        <div className="relative flex h-10 items-center justify-center  rounded-t-xl bg-black">
-          <div className="absolute start-4 space-x-2">
-            <span className="inline-block h-4 w-4 rounded-full bg-yellow-500"></span>
-            <span className="inline-block h-4 w-4 rounded-full bg-red-500"></span>
-            <span className="inline-block h-4 w-4 rounded-full bg-green-500"></span>
+        <div className='relative flex h-10 items-center justify-center  rounded-t-xl bg-black'>
+          <div className='absolute start-4 top-3 space-x-2'>
+            <span className='inline-block h-4 w-4 rounded-full bg-yellow-500'></span>
+            <span className='inline-block h-4 w-4 rounded-full bg-red-500'></span>
+            <span className='inline-block h-4 w-4 rounded-full bg-green-500'></span>
           </div>
 
-          <p className="absolute self-center ">Contact Me</p>
+          <p className='absolute self-center '>Contact Me</p>
         </div>
-        <div className="flex flex-col items-stretch space-y-5 px-6 py-2 sm:px-12 sm:py-8">
+        <div className='glass-card flex flex-col items-stretch space-y-5 rounded-t-none p-6 py-8 sm:px-12'>
           <motion.input
             initial={{ x: -120 }}
             whileInView={{ x: 0 }}
             transition={{ duration: Animation.delay }}
-            id="name"
-            name="name"
-            placeholder="Name"
-            type="text"
+            id='name'
+            name='name'
+            placeholder='Name'
+            type='text'
             onChange={formik.handleChange}
             value={formik.values.name}
+            className='p-6'
           />
           <motion.input
             initial={{ x: 120 }}
             whileInView={{ x: 0 }}
             transition={{ duration: Animation.delay }}
-            id="email"
-            name="email"
-            type="email"
-            placeholder="Email"
+            id='email'
+            name='email'
+            type='email'
+            placeholder='Email'
             onChange={formik.handleChange}
+            className='p-6'
             value={formik.values.email}
           />
 
@@ -103,11 +105,12 @@ function Contact() {
             initial={{ x: -120 }}
             whileInView={{ x: 0 }}
             transition={{ duration: Animation.delay }}
-            id="mobile"
-            name="mobile"
-            type="mobile"
-            placeholder="Mobile Number"
+            id='mobile'
+            name='mobile'
+            type='mobile'
+            placeholder='Mobile Number'
             onChange={formik.handleChange}
+            className='p-6'
             value={formik.values.mobile}
           />
 
@@ -115,19 +118,21 @@ function Contact() {
             initial={{ x: 120 }}
             whileInView={{ x: 0 }}
             transition={{ duration: Animation.delay }}
-            id="message"
-            name="message"
+            id='message'
+            name='message'
             value={formik.values.message}
             onChange={formik.handleChange}
-            placeholder="Message"
+            placeholder='Message'
+            className='p-6'
+            rows={5}
           />
 
           <motion.button
             initial={{ x: -120 }}
             whileInView={{ x: 0 }}
             transition={{ duration: Animation.delay }}
-            type="submit"
-            className="containedBtn"
+            type='submit'
+            className='containedBtn'
             onClick={() => formik.handleSubmit()}
           >
             Submit

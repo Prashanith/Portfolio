@@ -10,10 +10,10 @@ function Logo() {
       className="flex flex-row items-center justify-center text-white"
     >
       <span>
-        <img src={"/null.svg"} className="h-[20px]" />
+        <img src={"/logo/null.svg"} className="h-[20px]" />
       </span>
       <span>
-        <img src={"/infinity.svg"} className="ml-2 h-[40px]" />
+        <img src={"/logo/infinity.svg"} className="ml-2 h-[40px]" />
       </span>
     </motion.div>
   );

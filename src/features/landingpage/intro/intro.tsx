@@ -72,8 +72,8 @@ function Intro() {
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
         transition={{ delay: Animation.delay }}
-        src="/intro.svg"
-        className="hidden w-1/2 md:block"
+        src="/bg/introalt.svg"
+        className="hidden w-1/2 md:block max-h-[60vh]"
       />
     </div>
   );
