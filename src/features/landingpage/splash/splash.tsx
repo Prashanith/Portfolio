@@ -8,13 +8,13 @@ function SplashScreen() {
   const route = useNavigate();
 
   useEffect(() => {
-    setTimeout(() => {
-      route(AppRoutes.HOME);
-    }, 2100);
+    // setTimeout(() => {
+    //   route(AppRoutes.HOME);
+    // }, 2100);
   }, []);
 
   return (
-    <motion.div className="flex h-screen flex-row items-center justify-center bg-primary">
+    <motion.div className="flex h-screen flex-row items-center justify-center bg-bgTheme bg-left-bottom">
       <motion.div
         initial={{ scale: 1 }}
         animate={{ scale: 1.5 }}

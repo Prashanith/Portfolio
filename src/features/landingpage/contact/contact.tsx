@@ -49,7 +49,7 @@ function Contact() {
   return (
     <div
       id='contact'
-      className='pagePadding mx-10 flex items-center justify-center bg-opacity-50 bg-bgContact bg-center bg-no-repeat py-16 sm:mx-16 sm:py-28'
+      className='pagePadding flex items-center justify-center bg-opacity-50 bg-bgContact bg-center bg-no-repeat py-16 sm:py-28'
     >
       <Dialog
         title={"Alert"}

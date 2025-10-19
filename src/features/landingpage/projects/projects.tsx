@@ -12,7 +12,7 @@ const skills: Project[] = [
     title: "Pratibha",
     logo: "/firebase.svg",
     url: "https://pratibha-d4e57.web.app/",
-    description: "An Academic Application to manage Assignments Online",
+    description: "An LMS Application",
   },
   {
     title: "IServices",
@@ -24,7 +24,7 @@ const skills: Project[] = [
     title: "Relief Riders",
     logo: "/firebase.svg",
     url: "https://github.com/Prashanith/RidersForRelief",
-    description: "An Application for NGO to help COVID patients",
+    description: "An Application to help COVID patients",
   },
   {
     title: "Qwik Chat",
@@ -45,7 +45,7 @@ function Projects() {
       <div
         id="skillsCard"
         className="carousel-horizontal carousel carousel-center
-        rounded-box mt-8 w-[calc(100vw-5rem)] 
+        rounded-box mt-0 sm:mt-8 w-[calc(100vw-5rem)] 
         max-w-fit space-x-4 bg-transparent p-4"
       >
         {skills.map((skill) => {
@@ -59,7 +59,7 @@ function Projects() {
             />
           );
         })}
-        <div className="carousel-item relative my-10 flex aspect-square h-28 flex-col items-center justify-center rounded-lg border-[1pt] border-tertiary /50 p-8 shadow-sm transition-all duration-150 hover:scale-105 hover:shadow-tertiary sm:h-32 md:h-36 lg:h-40 xl:h-44 2xl:h-48">
+        <div className="glass-card carousel-item relative my-10 flex aspect-square h-28 flex-col items-center justify-center rounded-lg border-[1pt] border-tertiary /50 p-8 shadow-sm transition-all duration-150 hover:scale-105 hover:shadow-tertiary sm:h-32 md:h-36 lg:h-40 xl:h-44 2xl:h-48">
           <span>
             More Projects on{" "}
             <a

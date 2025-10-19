@@ -19,9 +19,9 @@ function SkillCard({ skill, logo }: Skill) {
       <img
         src={logo}
         alt="image"
-        className="h-full w-full rounded-xl object-fill p-5"
+        className="h-[90%] w-full rounded-xl object-contain p-3"
       />
-      <div className="mt-4 text-center">
+      <div className="h-[10%] text-center">
         <h2 className="text-xl font-bold uppercase text-teal-100">{skill}</h2>
       </div>
     </motion.div>

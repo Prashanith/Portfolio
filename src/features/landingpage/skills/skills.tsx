@@ -22,7 +22,7 @@ function Skills() {
       <div
         id="skillsCard"
         className="carousel-horizontal carousel carousel-center
-        rounded-box mt-8 w-[calc(100vw-5rem)] 
+        rounded-box mt-0 sm:mt-8 w-[calc(100vw-5rem)] 
         max-w-fit space-x-4 bg-transparent p-4"
       >
         {skills.map((skill) => {

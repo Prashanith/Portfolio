@@ -40,13 +40,8 @@
     inset -1px -1px 1px 1px rgba(255, 255, 255, 0.5);
 }
 
-.liquidGlass-text {
-  @apply flex justify-center items-center text-black space-x-6;
-  z-index: 3;
-}
-
 .dock-item{
-  @apply text-white size-16 backdrop-blur-md rounded-lg p-3;
+  @apply text-white size-14 sm:size-16 backdrop-blur-md rounded-lg p-2 sm:p-3;
 }
 
 a {
