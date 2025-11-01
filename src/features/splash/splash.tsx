@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./splash.css";
-import { AppRoutes } from "../../../navigation/routes";
+import { AppRoutes } from "../../navigation/routes";
 import { motion } from "framer-motion";
 
 function SplashScreen() {
