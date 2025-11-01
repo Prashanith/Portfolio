@@ -10,8 +10,8 @@
   .outlinedBtn {
     @apply rounded-full border-[1pt]  border-gray-800 px-5
     py-2  text-sm font-semibold 
-    uppercase text-white outline-none transition-all duration-150 ease-linear hover:border-tertiary 
-    hover:bg-secondary hover:text-white hover:border-none focus:outline-none;
+    uppercase text-white outline-none transition-all duration-150 ease-linear hover:border-none 
+    hover:border-tertiary hover:bg-secondary hover:text-white focus:outline-none;
   }
 
   .containedBtn {
@@ -102,44 +102,25 @@ textarea:hover,
 input:focus,
 input:active,
 input:hover {
-  @apply h-6  glass-card placeholder:text-white text-white outline-none outline-offset-0;
-}
-
-.glassBtn {
-   @apply rounded-full px-5
-    py-2  text-sm font-semibold 
-    uppercase text-white;
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
-  border-radius: 16px;
-  color: white;
-  backdrop-filter: blur(40px);         /* The "frost" */
-  -webkit-backdrop-filter: blur(20px); /* For Safari/iOS */
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  @apply h-6 text-white outline-none outline-offset-0 placeholder:text-white;
 }
 
 .glass-card {
-  background: rgba(255, 255, 255, 0.1); /* Semi-transparent */
-  border-radius: 16px;
-  color: white;
-  backdrop-filter: blur(10px);         /* The "frost" */
-  -webkit-backdrop-filter: blur(20px); /* For Safari/iOS */
+  position: relative;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  /* filter: url(#frost); */
+  -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-}
-
-.glass-card  {
-  background: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.15);
-  backdrop-filter: blur(12px);
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
-  transition: transform 0.4s ease;
+  box-shadow:
+    0 0 2px rgba(0, 0, 0, 0.1),
+    inset 2px 2px 4px rgba(255, 255, 255, 0.24),
+    inset -1px -1px 4px rgba(255, 255, 255, 0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   transform-style: preserve-3d;
   will-change: transform;
+  isolation: isolate;
+  border-radius: 16px;
+  overflow: hidden;
 }
-.glass-card :hover {
-  transform: rotateY(10deg) rotateX(5deg);
-}
-
 

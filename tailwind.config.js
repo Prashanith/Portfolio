@@ -13,6 +13,7 @@ export default {
       backgroundImage: {
         bgContact: "url('/bg/map.svg')",
         bgTheme: "url('/bg/bg.jpeg')",
+        bgFrost: "url('/bg/frost.svg')",
       },
     },
   },
