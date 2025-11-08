@@ -75,7 +75,7 @@ function Contact() {
 
           <p className='absolute self-center '>Contact Me</p>
         </div>
-        <div className='glass-card flex flex-col items-stretch space-y-5 rounded-t-none p-6 py-8 sm:px-12'>
+        <div className='glass-card rounded-b-xl flex flex-col items-stretch space-y-5 rounded-t-none p-6 py-8 sm:px-12'>
           <motion.input
             initial={{ x: -120 }}
             whileInView={{ x: 0 }}
@@ -86,7 +86,7 @@ function Contact() {
             type='text'
             onChange={formik.handleChange}
             value={formik.values.name}
-            className='p-6'
+            className='glass-card p-6'
           />
           <motion.input
             initial={{ x: 120 }}
@@ -97,7 +97,7 @@ function Contact() {
             type='email'
             placeholder='Email'
             onChange={formik.handleChange}
-            className='p-6'
+            className='glass-card p-6'
             value={formik.values.email}
           />
 
@@ -110,7 +110,7 @@ function Contact() {
             type='mobile'
             placeholder='Mobile Number'
             onChange={formik.handleChange}
-            className='p-6'
+            className='glass-card p-6'
             value={formik.values.mobile}
           />
 
@@ -123,8 +123,8 @@ function Contact() {
             value={formik.values.message}
             onChange={formik.handleChange}
             placeholder='Message'
-            className='p-6'
-            rows={5}
+            className='glass-card p-4'
+            rows={10}
           />
 
           <motion.button
@@ -132,7 +132,7 @@ function Contact() {
             whileInView={{ x: 0 }}
             transition={{ duration: Animation.delay }}
             type='submit'
-            className='containedBtn'
+            className='normalBtn glass-card'
             onClick={() => formik.handleSubmit()}
           >
             Submit

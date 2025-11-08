@@ -22,7 +22,7 @@
   }
 
   .normalBtn {
-    @apply  px-5 py-3 text-sm font-semibold uppercase text-white outline-none transition-all duration-150 
+    @apply rounded-full px-5 py-3 text-sm font-semibold uppercase text-white outline-none transition-all duration-150 
     ease-linear hover:scale-105;
   }
 
@@ -128,7 +128,6 @@ input:hover {
   transform-style: preserve-3d;
   will-change: transform;
   isolation: isolate;
-  border-radius: 16px;
   overflow: hidden;
 }
 
