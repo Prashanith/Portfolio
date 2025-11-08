@@ -9,7 +9,7 @@ function NavigationDock() {
   const navigate = useNavigate();
   return (
     <Animate>
-      <div className='glass-card fixed bottom-8 left-1/2 flex w-max -translate-x-1/2 flex-row items-center justify-center gap-3 md:gap-6 rounded-xl px-5 p-4'>
+      <div className='glass-card z-[1000] fixed bottom-8 left-1/2 flex w-max -translate-x-1/2 flex-row items-center justify-center gap-3 md:gap-6 rounded-xl px-5 p-4'>
         <a href={`#${"skills"}`} onClick={() => navigate(AppRoutes.HOME)}>
           <CIcon
             icon={cibVisualStudioCode}
@@ -17,7 +17,7 @@ function NavigationDock() {
           />
         </a>
         <a href={`#${"contact"}`} onClick={() => navigate(AppRoutes.HOME)}>
-          <CIcon icon={cilShortText} className='dock-item cursor-pointer' />
+          <CIcon icon={cilShortText} className='dock-item cursor-pointer text-white' />
         </a>
         <a href={`#${"about"}`} onClick={() => navigate(AppRoutes.HOME)}>
           <CIcon icon={cibArchLinux} className='dock-item cursor-pointer' />
@@ -26,7 +26,7 @@ function NavigationDock() {
           href={`#${"beyondCode"}`}
           onClick={() => navigate(AppRoutes.BEYONDCODE)}
         >
-          <CIcon icon={cilRunning} className='dock-item cursor-pointer' />
+          <CIcon icon={cilRunning} className='dock-item cursor-pointer text-white' />
         </a>
       </div>
     </Animate>

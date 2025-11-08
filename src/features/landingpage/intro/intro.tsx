@@ -33,7 +33,7 @@ function Intro() {
         {/* <p className="mt-10 text-lg font-medium">I call myself DEV007</p> */}
         <div className="mt-10 flex flex-wrap items-center justify-start gap-2">
           <button
-            className="outlinedBtn mr-6"
+            className="normalBtn glass-card mr-6"
             onClick={() =>
               download_resume(
                 "https://drive.google.com/file/d/1ip6L6Wn8IsgqVSNGY6cUTy3Tnc5TEUbG/view?usp=drive_link"
@@ -52,7 +52,7 @@ function Intro() {
             )}
           </button>
           <button
-            className="containedBtn mr-6"
+            className="normalBtn glass-card mr-6"
             onClick={() => download_resume(upiLink)}
           >
             {isLoading ? (
