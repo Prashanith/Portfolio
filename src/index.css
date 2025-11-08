@@ -24,6 +24,10 @@
   .fabButton {
     @apply border-collapse rounded-full;
   }
+
+  .dock-item{
+    @apply size-6 md:size-8 xl:size-10;
+  }
 }
 
 @layer utilities {
@@ -106,7 +110,6 @@ input:hover {
 }
 
 .glass-card {
-  position: relative;
   background: rgba(255, 255, 255, 0.05);
   backdrop-filter: blur(20px);
   /* filter: url(#frost); */

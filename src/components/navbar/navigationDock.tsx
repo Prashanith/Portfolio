@@ -9,7 +9,7 @@ function NavigationDock() {
   const navigate = useNavigate();
   return (
     <Animate>
-      <div className='glass fixed bottom-8 left-1/2 z-50 flex w-max -translate-x-1/2 flex-row items-center justify-center gap-3 rounded-xl p-3'>
+      <div className='glass-card fixed bottom-8 left-1/2 flex w-max -translate-x-1/2 flex-row items-center justify-center gap-3 md:gap-6 rounded-xl px-5 p-4'>
         <a href={`#${"skills"}`} onClick={() => navigate(AppRoutes.HOME)}>
           <CIcon
             icon={cibVisualStudioCode}
