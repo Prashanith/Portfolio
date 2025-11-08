@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "./splash.css";
 import { AppRoutes } from "../../navigation/routes";
-import { motion } from "framer-motion";
+import Animate from "../../components/animate/animate";
 
 function SplashScreen() {
   const route = useNavigate();
@@ -14,21 +14,16 @@ function SplashScreen() {
   }, []);
 
   return (
-    <motion.div className="flex h-screen flex-row items-center justify-center bg-bgTheme bg-left-bottom">
-      <motion.div
-        initial={{ scale: 1 }}
-        animate={{ scale: 1.5 }}
-        transition={{ delay: 0, duration: 2, type: "spring", stiffness: 880 }}
-        className="flex flex-row items-center justify-center"
-      >
-        <span className="text-[46px] ">
-          <img src={"/logo/null.svg"} className="h-[5vh] text-primary" />
+    <Animate className='flex h-screen flex-row items-center justify-center bg-bgTheme bg-left-bottom'>
+      <Animate className='flex flex-row items-center justify-center'>
+        <span className='text-[46px] '>
+          <img src={"/logo/null.svg"} className='h-[5vh] text-primary' />
         </span>
         <span>
-          <img src={"/logo/infinity.svg"} className="ml-3 h-[10vh]" />
+          <img src={"/logo/infinity.svg"} className='ml-3 h-[10vh]' />
         </span>
-      </motion.div>
-    </motion.div>
+      </Animate>
+    </Animate>
   );
 }
 

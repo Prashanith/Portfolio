@@ -1,12 +1,8 @@
-import { motion } from "framer-motion";
-import { Animation } from "../../config/animationConfig";
+import Animate from "../animate/animate";
 
 function Logo() {
   return (
-    <motion.div
-      initial={{ x: "-100vw" }}
-      animate={{ x: 0 }}
-      transition={{ delay: Animation.delay }}
+    <Animate
       className="flex flex-row items-center justify-center text-white"
     >
       <span>
@@ -15,7 +11,7 @@ function Logo() {
       <span>
         <img src={"/logo/infinity.svg"} className="ml-2 h-[40px]" />
       </span>
-    </motion.div>
+    </Animate>
   );
 }
 

@@ -1,5 +1,4 @@
-import { motion } from "framer-motion";
-import { Animation } from "../../../config/animationConfig";
+import Animate from "../../../components/animate/animate";
 
 interface Project {
   title: string;
@@ -10,10 +9,7 @@ interface Project {
 
 function ProjectCard({ title, description, url }: Project) {
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      transition={{ duration: Animation.delay }}
+    <Animate
       className='glass-card  carousel-item relative my-10 flex aspect-square h-[7.5rem] flex-col items-center justify-center 
       rounded-2xl p-8  shadow-sm transition-all duration-150 hover:scale-105 hover:shadow-tertiary sm:h-32 sm:p-8 md:h-36 lg:h-40 xl:h-44 2xl:h-48'
     >
@@ -28,7 +24,7 @@ function ProjectCard({ title, description, url }: Project) {
           PROJECT URL
         </a>
       </div>
-    </motion.div>
+    </Animate>
   );
 }
 

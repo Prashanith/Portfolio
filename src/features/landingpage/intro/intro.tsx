@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Animate from "../../../components/animate/animate";
 import { Animation } from "../../../config/animationConfig";
 import React from "react";
 
@@ -16,10 +17,7 @@ function Intro() {
 
   return (
     <div className="pagePadding flex h-[calc(100vh-70px)] flex-row items-center justify-between">
-      <motion.div
-        initial={{ x: "-100vw" }}
-        animate={{ x: 0 }}
-        transition={{ delay: Animation.delay }}
+      <Animate
       >
         <p className="boldText">
           I am
@@ -67,7 +65,7 @@ function Intro() {
             )}
           </button>
         </div>
-      </motion.div>
+      </Animate>
       <motion.img
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}

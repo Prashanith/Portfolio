@@ -5,6 +5,7 @@ import { db } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { motion } from "framer-motion";
 import { Animation } from "../../../config/animationConfig";
+import Animate from "../../../components/animate/animate";
 
 function Contact() {
   const [loading, setLoading] = useState<boolean>(false);
@@ -60,10 +61,7 @@ function Contact() {
         setShowDialog={setShowDialog}
         showDialog={showDialog}
       />
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 3, type: "spring" }}
+      <Animate
         className='flex w-[min(85vw,500px)] flex-col items-stretch justify-center rounded-xl text-center'
       >
         <div className='relative flex h-10 items-center justify-center  rounded-t-xl bg-black'>
@@ -138,7 +136,7 @@ function Contact() {
             Submit
           </motion.button>
         </div>
-      </motion.div>
+      </Animate>
     </div>
   );
 }
