@@ -23,10 +23,10 @@ function SportCard({ title, description, image }: ISportCard) {
         className="w-full lg:w-1/2"
       />
       <Animate
-        className={`flex w-full flex-col items-start justify-start text-left lg:w-1/2`}
+        className={` p-6 px-8 rounded-xl flex w-full flex-col items-start justify-start text-left lg:w-1/2`}
       >
-        <h2 className={`boldText mb-4`}>{title}</h2>
-        <p className={`whitespace-pre-line text-base`}>{description}</p>
+        <h2 className={`boldText mb-4 bg-black`}>{title}</h2>
+        <p className={`whitespace-pre-line text-base bg-black`}>{description}</p>
       </Animate>
     </Animate>
   );

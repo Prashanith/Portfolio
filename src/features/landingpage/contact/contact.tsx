@@ -5,7 +5,6 @@ import { db } from "../../../firebase";
 import { addDoc, collection } from "firebase/firestore";
 import { motion } from "framer-motion";
 import { Animation } from "../../../config/animationConfig";
-import Animate from "../../../components/animate/animate";
 
 function Contact() {
   const [loading, setLoading] = useState<boolean>(false);
