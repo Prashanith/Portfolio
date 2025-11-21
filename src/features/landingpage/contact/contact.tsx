@@ -61,19 +61,16 @@ function Contact() {
         setShowDialog={setShowDialog}
         showDialog={showDialog}
       />
-      <Animate
-        className='flex w-[min(85vw,500px)] flex-col items-stretch justify-center rounded-xl text-center'
-      >
-        <div className='relative flex h-10 items-center justify-center  rounded-t-xl bg-black'>
-          <div className='absolute start-4 top-3 space-x-2'>
+      <div className='flex w-[min(85vw,500px)] flex-col items-stretch justify-center rounded-xl text-center'>
+        <div className='relative flex h-[2.6rem] items-center justify-center rounded-t-2xl bg-black'>
+          <div className='absolute start-5 top-3 space-x-2'>
             <span className='inline-block h-4 w-4 rounded-full bg-yellow-500'></span>
             <span className='inline-block h-4 w-4 rounded-full bg-red-500'></span>
             <span className='inline-block h-4 w-4 rounded-full bg-green-500'></span>
           </div>
-
           <p className='absolute self-center '>Contact Me</p>
         </div>
-        <div className='glass-card rounded-b-xl flex flex-col items-stretch space-y-5 rounded-t-none p-6 py-8 sm:px-12'>
+        <div className='glass-card flex flex-col items-stretch gap-y-5 rounded-b-2xl rounded-t-none p-6 py-8 sm:px-8'>
           <motion.input
             initial={{ x: -120 }}
             whileInView={{ x: 0 }}
@@ -121,7 +118,7 @@ function Contact() {
             value={formik.values.message}
             onChange={formik.handleChange}
             placeholder='Message'
-            className='glass-card p-4'
+            className='glass-card px-6 py-3'
             rows={10}
           />
 
@@ -130,13 +127,13 @@ function Contact() {
             whileInView={{ x: 0 }}
             transition={{ duration: Animation.delay }}
             type='submit'
-            className='normalBtn glass-card'
+            className='normalBtn glass-card mt-4'
             onClick={() => formik.handleSubmit()}
           >
             Submit
           </motion.button>
         </div>
-      </Animate>
+      </div>
     </div>
   );
 }

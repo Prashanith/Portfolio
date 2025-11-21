@@ -30,8 +30,8 @@
     @apply border-collapse rounded-full;
   }
 
-  .dock-item{
-    @apply size-6 md:size-8 xl:size-10 fill-white;
+  .dock-item {
+    @apply size-4 fill-white md:size-6 xl:size-8;
   }
 }
 
@@ -111,7 +111,7 @@ textarea:hover,
 input:focus,
 input:active,
 input:hover {
-  @apply h-6 text-white outline-none outline-offset-0 placeholder:text-white;
+  @apply h-2 text-white outline-none outline-offset-0 placeholder:text-white rounded-full;
 }
 
 .glass-card {
@@ -120,9 +120,9 @@ input:hover {
   /* filter: url(#frost); */
   -webkit-backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  box-shadow:
-    0 0 2px rgba(0, 0, 0, 0.1),
-    inset 2px 2px 4px rgba(255, 255, 255, 0.24),
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.1),
+    inset 1px 1px 2px rgba(255, 255, 255, 0.24),
+    inset 2px 2px 2px rgba(119, 98, 98, 0.24),
     inset -1px -1px 4px rgba(255, 255, 255, 0.05);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transform-style: preserve-3d;
@@ -130,4 +130,3 @@ input:hover {
   isolation: isolate;
   overflow: hidden;
 }
-
