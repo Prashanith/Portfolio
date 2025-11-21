@@ -8,22 +8,35 @@ function NavigationDock() {
   const navigate = useNavigate();
   return (
     <div className='glass-card fixed bottom-8 left-1/2 z-[1000] flex w-max -translate-x-1/2 flex-row items-center justify-center gap-8 rounded-full p-4 px-8 md:gap-6'>
-      <a href={`#${"skills"}`} onClick={() => navigate(AppRoutes.HOME)}>
+      <a
+        title='skills'
+        href={`#${"skills"}`}
+        onClick={() => navigate(AppRoutes.HOME)}
+      >
         <CIcon
           icon={cibVisualStudioCode}
           className='dock-item cursor-pointer'
         />
       </a>
-      <a href={`#${"contact"}`} onClick={() => navigate(AppRoutes.HOME)}>
+      <a
+        title='contact'
+        href={`#${"contact"}`}
+        onClick={() => navigate(AppRoutes.HOME)}
+      >
         <CIcon
           icon={cilShortText}
           className='dock-item cursor-pointer text-white'
         />
       </a>
-      <a href={`#${"about"}`} onClick={() => navigate(AppRoutes.HOME)}>
+      <a
+        title='about'
+        href={`#${"about"}`}
+        onClick={() => navigate(AppRoutes.HOME)}
+      >
         <CIcon icon={cibArchLinux} className='dock-item cursor-pointer' />
       </a>
       <a
+        title='sport'
         href={`#${"beyondCode"}`}
         onClick={() => navigate(AppRoutes.BEYONDCODE)}
       >
