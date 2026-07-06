@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import Animate from "../../../components/animate/animate";
 import { Animation } from "../../../config/animationConfig";
 import React from "react";
 
@@ -16,10 +17,7 @@ function Intro() {
 
   return (
     <div className="pagePadding flex h-[calc(100vh-70px)] flex-row items-center justify-between">
-      <motion.div
-        initial={{ x: "-100vw" }}
-        animate={{ x: 0 }}
-        transition={{ delay: Animation.delay }}
+      <Animate
       >
         <p className="boldText">
           I am
@@ -33,7 +31,7 @@ function Intro() {
         {/* <p className="mt-10 text-lg font-medium">I call myself DEV007</p> */}
         <div className="mt-10 flex flex-wrap items-center justify-start gap-2">
           <button
-            className="outlinedBtn mr-6"
+            className="normalBtn glass-card mr-6"
             onClick={() =>
               download_resume(
                 "https://drive.google.com/file/d/1ip6L6Wn8IsgqVSNGY6cUTy3Tnc5TEUbG/view?usp=drive_link"
@@ -52,7 +50,7 @@ function Intro() {
             )}
           </button>
           <button
-            className="containedBtn mr-6"
+            className="normalBtn glass-card mr-6"
             onClick={() => download_resume(upiLink)}
           >
             {isLoading ? (
@@ -67,13 +65,13 @@ function Intro() {
             )}
           </button>
         </div>
-      </motion.div>
+      </Animate>
       <motion.img
         initial={{ x: "100vw" }}
         animate={{ x: 0 }}
         transition={{ delay: Animation.delay }}
-        src="/intro.svg"
-        className="hidden w-1/2 md:block"
+        src="/bg/introalt.svg"
+        className="hidden w-1/2 md:block max-h-[60vh]"
       />
     </div>
   );

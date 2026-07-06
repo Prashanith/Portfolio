@@ -1,5 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import SplashScreen from "../features/landingpage/splash/splash";
+import SplashScreen from "../features/splash/splash";
 import LandingPage from "../features/landingpage/landingPage";
 import { AppRoutes } from "./routes";
 import BeyondCode from "../features/beyondCode/beyondCode";
@@ -9,7 +9,7 @@ function ApplicationRouter() {
     <Routes>
       <Route path={AppRoutes.SPLASH} element={<SplashScreen />} />
       <Route path={AppRoutes.HOME} element={<LandingPage />} />
-      <Route path={AppRoutes.BEYONGCODE} element={<BeyondCode />} />
+      <Route path={AppRoutes.BEYONDCODE} element={<BeyondCode />} />
     </Routes>
   );
 }
